@@ -19,6 +19,7 @@ const { title } = Astro.props as Props;
 	</body>
 </html>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 	:root {
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -48,8 +49,8 @@ const { title } = Astro.props as Props;
 		font-size: var(--font-size-lg);
 	}
 
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+	:global(body) {
+		font-family: "Roboto Mono", Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
