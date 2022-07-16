@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "Game 1",
+      "imageURL": "https://img.freepik.com/free-vector/space-game-level-background-with-platforms_107791-3660.jpg?w=2000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.",
+      "badge": ["unity", "C#"]
+    },
+    {
+      "title": "Game 2",
+      "imageURL": "https://img.freepik.com/free-vector/space-game-level-background-with-platforms_107791-3660.jpg?w=2000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.",
+      "badge": ["unity", "C#"]
+    },
+    {
+      "title": "Game 3",
+      "imageURL": "https://img.freepik.com/free-vector/space-game-level-background-with-platforms_107791-3660.jpg?w=2000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.",
+      "badge": ["unity"]
+    }
+  ]
+}

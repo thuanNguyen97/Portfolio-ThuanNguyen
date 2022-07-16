@@ -1,0 +1,8 @@
+---
+export interface Props {
+	badge: string
+}
+const { badge } = Astro.props;
+---
+
+<span class="inline-block bg-blue-600 bg-opacity-[0.96] px-3 py-1 rounded-md text-[12px] mx-1">{badge}</span>

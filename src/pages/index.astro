@@ -1,37 +1,46 @@
 ---
+import github from '../assets/github.svg'
+import gmail from "../assets/gmail.svg"
+import linkedin from "../assets/linkedin.svg"
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Card from '@layouts/Card.astro';
+
+
+import { projects } from "../assets/projects.json"
+
 ---
 <Layout title="Welcome to Astro.">
+	<header class="py-6 mb-10">
+		<div class="flex items-center justify-between mb-10">
+			<h1 class="font-bold text-3xl text-white">Thuan Nguyen</h1>
+			<nav>
+				<ul class="flex items-center -mx-2">
+					<li class="mx-2"><a href="#" class="px-4 py-2 font-medium capitalize text-sm text-white rounded-md hover:text-gray-400 transition-all">Education & Skills</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="flex items-center -mx-10">
+			<div class="mx-10">
+				<h2 class="mb-4 text-2xl text-white font-semibold">Lorem, ipsum dolor.</h2>
+				<p class="text-white leading-relaxed mb-4">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum consequuntur fugit a distinctio in, corrupti obcaecati dolore similique molestiae possimus modi ab provident voluptatibus?
+				</p>
+				<div class="flex items-center -mx-2">
+					<a href="https://github.com/thuanNguyen97" target="_blank" class="w-10 h-10 inline-block mx-2 hover:-translate-y-0.5 transition-all"><img src={github} alt="github"></a>
+					<a href="https://www.linkedin.com/in/thuan-nguyen-a782141bb/" target="_blank" class="w-10 h-10 inline-block mx-2 hover:-translate-y-0.5 transition-all"><img src={linkedin} alt="linkedin"></a>
+					<a href="mailto:nguyencuuthuan2001@gmail.com" class="w-10 h-10 inline-block mx-2 hover:-translate-y-0.5 transition-all"><img src={gmail} alt="gmail"></a>
+				</div>
+			</div>
+			<div class="shrink-0 mx-10 rounded-full w-56 h-56">
+				<img class="object-fill rounded-full" src="https://res.cloudinary.com/dlbkvfo8l/image/upload/v1658001495/PXL_20201030_082021914-removebg_qitcn2.png" alt="avatar">
+			</div>
+		</div>
+	</header>
 	<main>
-		<h1 >Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="text-red-500">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-				
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<h2 class="text-white font-semibold text-xl capitalize mb-10">my <span class="text-sky-400">projects</span></h2>
+		<div class="grid grid-cols-3 gap-6 place-items-stretch">
+			{projects.map(item => <Card imageURL={item.imageURL} title={item.title} desc={item.desc} badge={item.badge} />)}
+		</div>
 	</main>
 </Layout>
 
